@@ -1,0 +1,9 @@
+*.log
+build/
+_x/
+*.csv
+*.wdb
+*.wcfg
+*.protoinst
+.Xil/
+emconfig.json

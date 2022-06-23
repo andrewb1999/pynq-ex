@@ -1,0 +1,17 @@
+<root versionMajor="1" versionMinor="5">
+    <kernel name="kernel" language="c" vlnv="xilinx.com:hls:kernel:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" compileOptions="-DHLSLIB_SYNTHESIS -DHLSLIB_XILINX -std=c++17 -DVITIS_MAJOR_VERSION=2020 -DVITIS_MINOR_VERSION=2 -DVITIS_VERSION=2020.2 -D__VITIS_HLS__" profileType="none" hwControlProtocol="ap_ctrl_chain" interrupt="true">
+        <ports>
+            <port name="M_AXI_M0" portType="addressable" mode="master" base="0x0" range="0xFFFFFFFF" dataWidth="256"/>
+            <port name="M_AXI_M1" portType="addressable" mode="master" base="0x0" range="0xFFFFFFFF" dataWidth="256"/>
+            <port name="M_AXI_M2" portType="addressable" mode="master" base="0x0" range="0xFFFFFFFF" dataWidth="32"/>
+            <port name="S_AXI_CONTROL" portType="addressable" mode="slave" base="0x0" range="0x1000" dataWidth="32"/>
+        </ports>
+        <args>
+            <arg id="0" name="A" addressQualifier="1" port="M_AXI_M0" hostOffset="0x0" hostSize="0x8" offset="0x10" size="0x8" type="void*"/>
+            <arg id="1" name="B" addressQualifier="1" port="M_AXI_M1" hostOffset="0x0" hostSize="0x8" offset="0x1C" size="0x8" type="void*"/>
+            <arg id="2" name="v" addressQualifier="1" port="M_AXI_M2" hostOffset="0x0" hostSize="0x8" offset="0x28" size="0x8" type="void*"/>
+        </args>
+        <compileWorkGroupSize x="1" y="1" z="1"/>
+        <maxWorkGroupSize x="1" y="1" z="1"/>
+    </kernel>
+</root>
